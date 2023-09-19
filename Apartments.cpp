@@ -17,7 +17,7 @@ Intuition: sorting is definitely required & a map to check if
 1. Simple O(n*m) solution involves running loop m and checking if 
    the apartment satisfies condition for each n - TLE
 
-2. Use a while loop which checks for basic conditions - O(n+m)
+2. Use a while loop which checks for basic conditions - O(nlogn+mlogm)
    If the apartment from the available apartment(k_[j]) is greater
    than the apartment(m_[i]) => none of the other available apartments
    will satisfy condition (as sorted) => i++ (skip that applicant)
