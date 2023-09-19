@@ -23,6 +23,8 @@ Intuition:
 
 		   Run this loop till i<=j
 
+		   TC - O(n)
+
 */
 
 int main() {
