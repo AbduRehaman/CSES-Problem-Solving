@@ -9,6 +9,27 @@ typedef vector<vector<int>> vii;
 #define unm(a, b) unordered_map<a, b>
 #define uns(a) unordered_set<a>
 
+
+/*
+
+Intuition: sorting is definitely required & a map to check if 
+		   apartment is already occupied
+1. Simple O(n*m) solution involves running loop m and checking if 
+   the apartment satisfies condition for each n - TLE
+
+2. Use a while loop which checks for basic conditions - O(n+m)
+   If the apartment from the available apartment(k_[j]) is greater
+   than the apartment(m_[i]) => none of the other available apartments
+   will satisfy condition (as sorted) => i++ (skip that applicant)
+
+   |||ly, if the k_[j] is smaller than the m_[i] => that available 
+   apartment is not used => j++
+
+   Finally, if condition satisfies, then mark the house as booked
+   and i++, j++.
+
+*/
+
 int main() {
     // freopen("input.txt", "r", stdin);
     // freopen("output.txt", "w", stdout);
