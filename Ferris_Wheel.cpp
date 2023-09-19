@@ -46,8 +46,8 @@ int main() {
     		j--;
     	}
     	else{
-			ans++;
-			j--;
+		ans++;
+		j--;
     	}
     }
 
