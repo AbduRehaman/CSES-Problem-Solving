@@ -23,7 +23,7 @@ Intuition:
 
 		   Run this loop till i<=j
 
-		   TC - O(n)
+		   TC - O(n) + O(nlogn) => O(nlogn)
 
 */
 
