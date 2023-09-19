@@ -6,6 +6,8 @@ typedef vector<int> vi;
 typedef pair<int,int> pi;
 typedef vector<pair<int,int>> vpi;
 
+// Just uncomment the print statements to get intuition
+
 int main() {
 
 	// freopen("input.txt","r",stdin);
