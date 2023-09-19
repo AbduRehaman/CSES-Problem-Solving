@@ -14,6 +14,7 @@ typedef vector<vector<int>> vii;
 
 Intuition: sorting is definitely required & a map to check if 
 		   apartment is already occupied
+
 1. Simple O(n*m) solution involves running loop m and checking if 
    the apartment satisfies condition for each n - TLE
 
@@ -25,8 +26,7 @@ Intuition: sorting is definitely required & a map to check if
    |||ly, if the k_[j] is smaller than the m_[i] => that available 
    apartment is not used => j++
 
-   Finally, if condition satisfies, then mark the house as booked
-   and i++, j++.
+   Finally, if condition satisfies then i++, j++. (No need of map)
 
 */
 
@@ -42,8 +42,7 @@ int main() {
     rep(i,0,m) cin>>m_[i];
     sort(k_.begin(), k_.end());
     sort(m_.begin(), m_.end());
-    unm(int,bool) mpp;
-    rep(i,0,n) mpp[i] = false;
+
     int ans=0;
 
     int i=0, j=0;
@@ -51,9 +50,8 @@ int main() {
     	if(k_[j] < (m_[i]-k)){
     		j++;
     	}
-    	else if((mpp[j]==false) && (k_[j]>=(m_[i]-k) && k_[j]<=(m_[i]+k))){
+    	else if(k_[j]>=(m_[i]-k) && k_[j]<=(m_[i]+k)){
     		ans++;
-    		mpp[j] = true;
     		j++;
     		i++;
     	}
