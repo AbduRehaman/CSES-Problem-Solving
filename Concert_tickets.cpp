@@ -31,6 +31,8 @@ Intuition:	sorting is necessary - but multiset handles it
 
 			Else print -1 as no such ticket available
 
+			TC - O(nlogn) + O(mlogn) (to binary search for every m in n) => O((n+m)logn)
+
 */
 
 int h,t;
